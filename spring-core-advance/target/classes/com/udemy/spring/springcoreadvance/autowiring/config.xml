@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- byType -->
+
+	<!-- <bean class="com.udemy.spring.springcoreadvance.autowiring.Address" 
+		name="address" p:hNo="123" p:street="mira mesa" p:city="san diego" /> -->
+	<!-- throws Exception bean cann't be duplicate in byType and also if bean 
+		is not present container will initialize null to that -->
+	<!-- <bean class="com.udemy.spring.springcoreadvance.autowiring.Address" 
+		name="address1" p:hNo="123" p:street="mira mesa" p:city="san diego" /> -->
+
+	<!-- <bean class="com.udemy.spring.springcoreadvance.autowiring.Employee" 
+		name="employee" autowire="byType"/> -->
+
+	<!-- byName -->
+	<!-- <bean class="com.udemy.spring.springcoreadvance.autowiring.Address" 
+		name="address" p:hNo="123" p:street="mira mesa" p:city="san diego" /> -->
+
+	<!-- throws exception in byName bcz name cann't be duplicate in bean -->
+	<!-- <bean class="com.udemy.spring.springcoreadvance.autowiring.Address" 
+		name="address" p:hNo="123" p:street="mira mesa" p:city="san diego" /> -->
+
+	<!-- <bean class="com.udemy.spring.springcoreadvance.autowiring.Address" 
+		name="address1" p:hNo="123" p:street="mira mesa" p:city="san diego" /> -->
+
+	<!-- <bean class="com.udemy.spring.springcoreadvance.autowiring.Employee" 
+		name="employee" autowire="byName"/> -->
+<!-- constructor -->
+	<bean
+		class="com.udemy.spring.springcoreadvance.autowiring.Address"
+		name="address" p:hNo="123" p:street="mira mesa" p:city="san diego" />
+	<bean
+		class="com.udemy.spring.springcoreadvance.autowiring.Employee"
+		name="employee" autowire="constructor" />
+
+
+</beans> 
